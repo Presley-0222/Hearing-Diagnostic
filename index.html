@@ -99,6 +99,17 @@ Need to ask user for data collection and adjust app visuals
 	osc.stop(audioCtx.currentTime + 2)
 	}
 	
+	function getSofter(){
+		var softerDecibel = parseInt(gain.gain.value) - 0.091;
+		gain.gain.value = softerDecibel;
+	}
+	
+	function getLouder(){
+		var louderDecibel = parseInt(gain.gain.value) + 0.091;
+		gain.gain.value = louderDecibel;
+	}
+	
+	
 	
 </script>
 <style>	
@@ -200,8 +211,9 @@ Need to ask user for data collection and adjust app visuals
 <p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
 	<button id="button1" onclick="decibel(125,0.091,-1);" class="w3-btn w3-black"> Play Sound </button>
 	<br>
-	<button id="button2" onclick="decibel(125,0.182,-1);" class="w3-btn w3-black"> Louder </button>
-	<button id="button3" onclick="decibel(125,0.182,-1);" class="w3-btn w3-black"> Softer </button>
+	<br>
+	<button id="button2" onclick="decibel(125,0.182,-1);" class="w3-btn w3-black"> Softer </button>
+	<button id="button3" onclick="decibel(125,0.182,-1);" class="w3-btn w3-black"> Louder </button>
 	
 <p> What is the lowest level where you could hear the noise? </p> 
 <!--BUTTONS-->
