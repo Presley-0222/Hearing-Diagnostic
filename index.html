@@ -106,17 +106,16 @@ function getSofter(){
         dB = dB - 0.091;
 	}
 	
-	function getLouder(){
+function getLouder(){
 		/* var louderDecibel = parseInt(gain.gain.value) + 0.091;
 		gain.gain.value = louderDecibel; */
         dB = dB + 0.091;
 	}
 	
-	 function showdB(){
+function showdB(){
     alert("Decibel level is:" + dB.toString());
     console.log("Decibel level is:" + dB.toString());
-    }
-	
+    }	
 	
 	
 </script>
@@ -217,7 +216,7 @@ function getSofter(){
 	
 <br>
 <p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
-	<button id="button1" onclick="decibel(125,-1);" class="w3-btn w3-black"> Play Sound </button>
+	<button id="button1" onclick="decibel(125,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
 	<br>
 	<br>
 	<button id="button2" onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
