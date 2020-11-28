@@ -226,16 +226,17 @@ function showdB(){
 	
 <br>
 <p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
-	<button id="button1" onclick="decibel(125,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<button onclick="decibel(125,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
 	<br>
 	<br>
-	<button id="button2" onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
-	<button id="button3" onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
-	
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
 <p> Click the button below to move to the next page and collect your data. </p> 
 	<br>
-	<br>
-	<a href="#125R" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<button href="#125R" class="w3-btn w3-black"> Next </button> <!--button to take user to the next page-->	
     	</div>
 	
 	
@@ -248,30 +249,19 @@ function showdB(){
 	
     	<div id="content" class="w3-container">
  
-<br>		
+<br>
 <p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
-	<button id="button25" onclick="decibel(125,0.091,1);" class="w3-btn w3-black"> 1 </button> <!--button plays a 125 Hz sound at 10 dB-->
-	
-<p> What is the lowest level where you could hear the noise? </p> 
-<!--BUTTONS-->
-	<button id="button36" onclick="buttonChange(36,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 1 </button>
-	<button id="button37" onclick="buttonChange(37,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 2 </button>
-	<button id="button38" onclick="buttonChange(38,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 3 </button>
-	<button id="button39" onclick="buttonChange(39,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 4 </button>
-	<button id="button40" onclick="buttonChange(40,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 5 </button>
-	<button id="button41" onclick="buttonChange(41,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 6 </button>
-	<button id="button42" onclick="buttonChange(42,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 7 </button>
-	<button id="button43" onclick="buttonChange(43,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 8 </button>
-	<button id="button44" onclick="buttonChange(44,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 9 </button>
-	<button id="button45" onclick="buttonChange(45,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 10 </button>
-	<button id="button46" onclick="buttonChange(46,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 11</button>
-		
-<p> Where were you able to hear the sound? </p> 
-	<button id="button47" onclick= "buttonChange(47,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> Left </button><!--button adds one to yes count-->	
-	<button id="button48" onclick= "buttonChange(48,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> Right </button><!--button adds one to no count-->
+	<button onclick="decibel(125,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
 	<br>
 	<br>
-	<a href="#500L" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>	
+	<button href="#500L" class="w3-btn w3-black"> Next </button> <!--button to take user to the next page-->	
 	</div>	
 
 
@@ -285,42 +275,20 @@ function showdB(){
 	</div>
 	
     	<div id="content" class="w3-container">
-	<br>
+		
+<br>
 <p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
-	<button id="button97" onclick="decibel(500,0.091,1);" class="w3-btn w3-black"> 1 </button> <!--button plays a 500 Hz sound at 10 dB-->
-	<button id="button98" onclick="decibel(500,0.182,1);" class="w3-btn w3-black"> 2 </button> <!--button plays a 500 Hz sound at 20 dB-->
-	<button id="button99" onclick="decibel(500,0.273,1);" class="w3-btn w3-black"> 3 </button> <!--button plays a 500 Hz sound at 30 dB-->
-	<button id="button100" onclick="decibel(500,0.3636,1);" class="w3-btn w3-black"> 4 </button> <!--button plays a 500 Hz sound at 40 dB-->
-	<button id="button101" onclick="decibel(500,0.4545,1);" class="w3-btn w3-black"> 5 </button> <!--button plays a 500 Hz sound at 50 dB-->
-	<button id="button102" onclick="decibel(500,0.54545,1);" class="w3-btn w3-black"> 6 </button> <!--button plays a 500 Hz sound at 60 dB-->
-	<button id="button103" onclick="decibel(500,0.6363,1);" class="w3-btn w3-black"> 7 </button> <!--button plays a 500 Hz sound at 70 dB-->
-	<button id="button104" onclick="decibel(500,0.72727,1);" class="w3-btn w3-black"> 8 </button> <!--button plays a 500 Hz sound at 80 dB-->
-	<button id="button105" onclick="decibel(500,0.8181,1);" class="w3-btn w3-black"> 9 </button> <!--button plays a 500 Hz sound at 90 dB-->
-	<button id="button106" onclick="decibel(500,0.90,1);" class="w3-btn w3-black"> 10 </button> <!--button plays a 500 Hz sound at 100 dB-->
-	<button id="button107" onclick="decibel(500,1,1);" class="w3-btn w3-black"> 11 </button> <!--button plays a 500 Hz sound at 110 dB-->
-		
-<p> What is the lowest level where you could hear the noise? Please click ONE button only.</p> 
-
-<!--BUTTONS-->
-	<button id="button108" onclick="buttonChange(108,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 1 </button>
-   	<button id="button109" onclick="buttonChange(109,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 2 </button>
-   	<button id="button110" onclick="buttonChange(110,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 3 </button>
-	<button id="button111" onclick="buttonChange(111,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 4 </button>
-	<button id="button112" onclick="buttonChange(112,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 5 </button>
-	<button id="button113" onclick="buttonChange(113,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 6 </button>
-	<button id="button114" onclick="buttonChange(114,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 7 </button>
-	<button id="button115" onclick="buttonChange(115,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 8 </button>
-	<button id="button116" onclick="buttonChange(116,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 9 </button>
-	<button id="button117" onclick="buttonChange(117,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 10 </button>
-	<button id="button118" onclick="buttonChange(118,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> 11 </button> 
-	
-	<p> Where were you able to hear the sound? </p> 
-	<button id="button119" onclick= "buttonChange(119,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> Left </button><!--button adds one to yes count-->	
-	<button id="button120" onclick= "buttonChange(120,'w3-btn w3-flat-belize-hole');" class="w3-btn w3-black"> Right </button><!--button adds one to no count-->
+	<button onclick="decibel(500,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
 	<br>
 	<br>
-		
-	<a href="#Results" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<button href="#Results" class="w3-btn w3-black"> Next </button> <!--button to take user to the next page-->	
     	</div>
 	
 	
