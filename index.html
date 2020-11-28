@@ -103,7 +103,7 @@ Need to ask user for data collection and adjust app visuals
 function getSofter(){
 		/* var softerDecibel = parseInt(gain.gain.value) - 0.091;
 		gain.gain.value = softerDecibel; */
-        dB = dB - 0.091;
+       // dB = dB - 0.091;
 	if (dB > 0.091){
         dB -= 0.091;
         }
@@ -114,7 +114,7 @@ function getSofter(){
 function getLouder(){
 		/* var louderDecibel = parseInt(gain.gain.value) + 0.091;
 		gain.gain.value = louderDecibel; */
-        dB = dB + 0.091;
+       // dB = dB + 0.091;
 	if (dB >= 1){
         dB = 1;
         }
