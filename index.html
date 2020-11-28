@@ -148,11 +148,93 @@ function showdB(){
     }	
 	
 function collectData(){
-    	arr[pageNum][2] = dB;
+    	arr[pageNum][2] = dB * 110;
         dB = 0.091;
         pageNum++;
     }
     
+function makeAudiogram() {
+	var leftEar = [];
+	var rightEar = [];
+	
+	for (var i = 0; i < 14; i+=2)
+	{
+		leftEar.push(
+			{
+				x: arr[i][0],
+				y: arr[i][2]
+			});
+	}
+	for (var i = 1; i < 14; i+=2)
+	{
+		rightEar.push(
+			{
+				x: arr[i][0],
+				y: arr[i][2]
+			});
+	}
+	
+	var chart = new CanvasJS.Chart("chartContainer", {
+	title:{
+		text: "Audiogram"
+	},
+    axisX:{
+  title : "Frequency (Hz)",
+  suffix: "Hz",
+  logarithmic: true,
+  logarithmBase: 125,
+  minimum: 110,
+  maximum: 8000,
+ },
+
+	axisY:[{
+		title: "Volume",
+		includeZero: true,
+        reversed: true,
+		suffix: "dB",
+		minimum: 0,
+ 		maximum: 110,
+	},
+	{
+		title: "Hearing Loss",
+		includeZero: true,
+	}],
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "line",
+		name: "Left Ear",
+		color: "#369EAD",
+		showInLegend: true,
+        axisYIndex: 2,
+		dataPoints: leftEar
+	},
+	{
+		type: "line",
+		name: "Right Ear",
+		color: "#C24642",
+		axisYIndex: 2,
+		showInLegend: true,
+		dataPoints: rightEar
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
 	
 	
 </script>
@@ -315,7 +397,7 @@ function collectData(){
 	<br>
 <p> Click the button below to move to the next page and collect your data. </p> 
 	<br>
-	<a href="#Results" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<a href="#Results" onclick= "makeAudiogram();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
     	</div>
 	
 	
@@ -326,89 +408,6 @@ function collectData(){
 	
     	<div id="content" class="w3-container">
 	<br>
-
-<script>
-window.onload = function (arr) {
-	var chart = new CanvasJS.Chart("chartContainer", {
-	title:{
-		text: "Audiogram"
-	},
-    axisX:{
-  title : "Frequency (Hz)",
-  suffix: "Hz",
-  logarithmic: true,
-  logarithmBase: 125,
-  minimum: 110,
-  maximum: 8000,
- },
-
-	axisY:[{
-		title: "Volume",
-		includeZero: true,
-        reversed: true,
-		suffix: "dB",
-		minimum: 10,
- 		maximum: 110,
-	},
-	{
-		title: "Hearing Loss",
-		includeZero: true,
-	}],
-	toolTip: {
-		shared: true
-	},
-	legend: {
-		cursor: "pointer",
-		itemclick: toggleDataSeries
-	},
-	data: [{
-		type: "line",
-		name: "Left Ear",
-		color: "#369EAD",
-		showInLegend: true,
-        axisYIndex: 2,
-		dataPoints: [
-	    { x: 125, y: arr[0] }, 
-            { x: 250, y: arr[2] },
-            { x: 500, y: arr[4] },
-            { x: 1000, y: arr[6] },
-            { x: 2000, y: arr[8] },
-            { x: 4000, y: arr[10] },
-            { x: 8000, y: arr[12] },
-
-		]
-	},
-	{
-		type: "line",
-		name: "Right Ear",
-		color: "#C24642",
-		axisYIndex: 2,
-		showInLegend: true,
-		dataPoints: [
-	    { x: 125, y: arr[1] }, 
-            { x: 250, y: arr[3] },
-            { x: 500, y: arr[5] },
-            { x: 1000, y: arr[7] },
-            { x: 2000, y: arr[9] },
-            { x: 4000, y: arr[11] },
-            { x: 8000, y: arr[13] },
-		
-		]
-	}]
-});
-chart.render();
-
-function toggleDataSeries(e) {
-	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-		e.dataSeries.visible = false;
-	} else {
-		e.dataSeries.visible = true;
-	}
-	e.chart.render();
-}
-
-}
-</script>
 
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
