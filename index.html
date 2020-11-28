@@ -104,12 +104,22 @@ function getSofter(){
 		/* var softerDecibel = parseInt(gain.gain.value) - 0.091;
 		gain.gain.value = softerDecibel; */
         dB = dB - 0.091;
+	if (dB > 0.091){
+        dB -= 0.091;
+        }
+        else
+        dB = 0.091;
 	}
 	
 function getLouder(){
 		/* var louderDecibel = parseInt(gain.gain.value) + 0.091;
 		gain.gain.value = louderDecibel; */
         dB = dB + 0.091;
+	if (dB >= 1){
+        dB = 1;
+        }
+        else
+        dB += 0.091;
 	}
 	
 function showdB(){
