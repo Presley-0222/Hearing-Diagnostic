@@ -325,7 +325,7 @@ function toggleDataSeries(e) {
 	
 	
 	
-<!--125DB LEFT EAR-->
+<!--125 Hz LEFT EAR-->
 <div class="page" id="125L">
 	<div id="header" class="w3-container w3-flat-peter-river">
 		<h1>125 HZ Part 1</h1>
@@ -350,7 +350,7 @@ function toggleDataSeries(e) {
 	
 	
 
-<!--125DB RIGHT EAR-->
+<!--125 Hz RIGHT EAR-->
 <div class="page" id="125R">
 <div id="header" class="w3-container w3-flat-peter-river">
 		<h1>125 HZ Part 2</h1>
@@ -370,14 +370,56 @@ function toggleDataSeries(e) {
 	<br>
 <p> Click the button below to move to the next page and collect your data. </p> 
 	<br>	
-	<a href="#500L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<a href="#250L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
 	</div>	
 
-
-    
+<!--250 Hz LEFT EAR-->
+<div class="page" id="250L">
+	<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>250 HZ Part 1</h1>
+	</div>
+	
+<div id="content" class="w3-container">
+	
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(250,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#250R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+<!--250 Hz RIGHT EAR-->
+<div class="page" id="250R">
+	<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>250 HZ Part 2</h1>
+	</div>
+	
+<div id="content" class="w3-container">
+	
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(250,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#500L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
         
-        
-<!--500DB LEFT EAR-->
+<!--500 Hz LEFT EAR-->
 <div class="page" id="500L">
 <div id="header" class="w3-container w3-flat-peter-river">
 		<h1>500 HZ Part 1</h1>
@@ -397,8 +439,223 @@ function toggleDataSeries(e) {
 	<br>
 <p> Click the button below to move to the next page and collect your data. </p> 
 	<br>
-	<a href="#Results" onclick= "makeAudiogram();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+	<a href="#500R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
     	</div>
+	
+<!--500 Hz RIGHT EAR-->
+<div class="page" id="500R">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>500 HZ Part 2</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(500,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#1000L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--1000 Hz LEFT EAR-->
+<div class="page" id="1000L">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>1000 HZ Part 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(1000,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#1000R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+<!--1000 Hz RIGHT EAR-->
+<div class="page" id="1000R">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>1000 HZ Part 2</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(1000,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#2000L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+<!--2000 Hz LEFT EAR-->
+<div class="page" id="2000L">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>2000 HZ Part 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(2000,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#2000R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--2000 Hz RIGHT EAR-->
+<div class="page" id="2000R">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>2000 HZ Part 2</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(2000,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#4000L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--4000 Hz LEFT EAR-->
+<div class="page" id="4000L">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>4000 HZ Part 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(4000,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#4000R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--4000 Hz RIGHT EAR-->
+<div class="page" id="4000R">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>4000 HZ Part 2</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(4000,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#8000L" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--8000 Hz LEFT EAR-->
+<div class="page" id="8000L">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>8000 HZ Part 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(8000,-1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#8000R" onclick= "collectData();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
+	<!--8000 Hz RIGHT EAR-->
+<div class="page" id="8000R">
+<div id="header" class="w3-container w3-flat-peter-river">
+		<h1>8000 HZ Part 2</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		
+<br>
+<p> Click the buttons below to hear the frequency. Starting at "1", click the next button until you can hear a noise. Once you hear the first noise, do not keep increasing the volume level and answer the next questions. If you need to hear the noise again, simply click the buttons again </p>
+	<button onclick="decibel(8000,1); showdB(); " class="w3-btn w3-black"> Play Sound </button>
+	<br>
+	<br>
+	<button onclick="getSofter();" class="w3-btn w3-black"> Softer </button>
+	<button onclick="getLouder();" class="w3-btn w3-black"> Louder </button>
+	<br>
+	<br>
+	<br>
+<p> Click the button below to move to the next page and collect your data. </p> 
+	<br>
+	<a href="#Results" onclick= "collectData(); makeAudiogram();" class="w3-btn w3-black"> Next </a> <!--button to take user to the next page-->	
+    	</div>
+	
+	
 	
 	
 <div class="page" id="Results">
