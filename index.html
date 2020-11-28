@@ -44,19 +44,19 @@ Need to ask user for data collection and adjust app visuals
 	var pageNum = 0;
 	
 	// String[][] arr = new String[13][2]; //Collumns are hz, which ear, and at what dB level it is heard by user
-	var arr = new array(13);
+	var arr = [];
 	  
     function initArray(){   //Sets starting values for array
     
-	for (var i = 0; i < 13; i++)
+	for (var i = 0; i < 14; i++)
     {
-    	arr[i] = new array(3);
+    	arr[i] = [];
     }    
     
 	    
     var hz = 125;
     var ear = -1;
-    for (r=0; r <13; r++)
+    for (r=0; r <14; r++)
     {
     	if ((r%2) == 0 && r != 0)
         	{
@@ -225,13 +225,13 @@ function collectData(){
 	<h1>Audiogram Test</h1>
 </div>
 	
-<div onload= "initArray();" id="content" class="w3-container">
+<div id="content" class="w3-container">
 	<p>This audiogram exam will help find out if you may have hearing loss and help to tell you the extent of your hearing loss. In order to perform this exam, 
 	follow all of the instructions listed below: </p>
 	<p> 1. Try to take this test in as quiet of an environment as possible for optimal results. </p>
 	<p> 2. This exam must be used with headphones in order to detect changes in the left/right ear. Use the highest quality of headphones that you have to take this test. </p>
 	<p> 3. Turn your device's volume to the maximum volume setting. The app will not play sounds as loud as the device's full amplitude, but uses this as a scale to calibrate accurate decibel outputs. </p>
-	 <a href="#125L" class="w3-btn w3-grey w3-round"> Get Started </a>
+	 <a href="#125L" class="w3-btn w3-grey w3-round" onclick= "initArray();" > Get Started </a>
 	<br> 
 	<br>
 	<br>
