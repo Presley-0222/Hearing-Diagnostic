@@ -42,12 +42,37 @@ Need to ask user for data collection and adjust app visuals
 	
 	var arr = new Array();
 	var dB = 0.091;
+	var pageNum = 0;
 	
+	string[][] arr = new String[13][2]; //Collumns are hz, which ear, and at what dB level it is heard by user
 	
-	function buttonChange(Idnum, color, result, arr) {
-	var button = document.getElementById('button' +Idnum);
-	arr.push(result);
-		
+	  
+    function initArray(){   //Sets starting values for array
+    
+    int hz = 125;
+    int ear = -1;
+    for (r=0; r <13; r++)
+    {
+    	if ((r%2) = 0 && r != 0)
+        	{
+            	hz *= 2;
+            }
+        for (c = 0; c<1; c++)
+        {
+        	if (c=0)
+            {
+            	arr[r][c] = hz;
+            }
+            if (c = 1)
+            {
+            	arr [r][c] = ear;
+            }
+            ear *= -1;
+            }
+        }
+    }
+
+	
 		
 	for (i = 1; i <= 4; i++) {                 // Change the i <= # for how many buttons you have
 	var otherbuttons = document.getElementById('button' +Idnum);
@@ -127,6 +152,13 @@ function showdB(){
     console.log("Decibel level is:" + dB.toString());
     }	
 	
+function collectData(){
+    	arr[pageNum][2] = dB;
+        dB = 0.091;
+        pageNum++;
+    }
+    
+	
 	
 </script>
 <style>	
@@ -192,7 +224,7 @@ function showdB(){
 	<h1>Audiogram Test</h1>
 </div>
 	
-<div id="content" class="w3-container">
+<div onload= "initarray()" id="content" class="w3-container">
 	<p>This audiogram exam will help find out if you may have hearing loss and help to tell you the extent of your hearing loss. In order to perform this exam, 
 	follow all of the instructions listed below: </p>
 	<p> 1. Try to take this test in as quiet of an environment as possible for optimal results. </p>
