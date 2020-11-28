@@ -62,7 +62,7 @@ Need to ask user for data collection and adjust app visuals
         	{
             	hz *= 2;
             }
-        	for (c = 0; c<1; c++)
+        	for (c = 0; c<=1; c++)
         {
         if (c == 0)
             {
@@ -71,8 +71,9 @@ Need to ask user for data collection and adjust app visuals
         if (c == 1)
             {
             	arr [r][c] = ear;
+		ear *= -1;
             }
-            ear *= -1;
+            
             }
         }
     }
